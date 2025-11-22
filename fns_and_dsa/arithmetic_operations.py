@@ -1,16 +1,16 @@
-def perform_operation (num1, num2, operation):
-    if operation =="add":
+def perform_operation(num1, num2, operation):
+    """
+    Perform basic arithmetic operations on two numbers.
+    """
+    if operation == "add":
         return num1 + num2
-    if operation =="subtraction":
+    elif operation == "subtract":
         return num1 - num2
-    if operation =="multiplication":
+    elif operation == "multiply":
         return num1 * num2
-    if operation =="division":
+    elif operation == "divide":
         if num2 == 0:
-            return "you cannot divide by zero"
-        else:
-            return num1 / num2
-
-    
-    
-
+            return "Error: Division by zero"
+        return num1 / num2
+    else:
+        return "Error: Invalid operation"
